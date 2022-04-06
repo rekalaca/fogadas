@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hu">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+<link href="../public/main.css" rel="stylesheet">
+
+<head>
+    <title>Fej vagy Írás</title>
+</head>
+
+<body>
+    <div id="header" class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Fej vagy Írás ?</h1>
+            </div>
+        </div>
+    </div>
+    <div id="body" class="container">
+        <div class="row">
+            <div id="bal" class="col-3" <p>A játék 1000 forinttal kezdődik. Egy pörgetés 10 forint, amit vagy elbuksz,
+                vagy 18 forintot zsebelsz be helyette...</p>
+                <br>
+                <h3>Fogadásaim:</h3><br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card-counter primary">
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                                <span class="count-numbers">1000</span>
+                                <span class="count-name">FORINT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="kozep" class="col-5">
+                <div class="card">
+                    <img src="../views/img/iras.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Játékra fel !</h5>
+                        <p class="card-text">Ha eltalálod, akkor 18 forintot nyersz. Ha nem találnád el, akkor buksz 10
+                            forintot... Felkészültél? Hajrá !</p>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="fej">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    FEJ
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="iras" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    ÍRÁS
+                                </label>
+                            </div>
+                        <a href="#" class="btn btn-primary gomb">Na gyerünk !</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="jobb" class="col-4">
+                <h3>Eredményeid:</h3>
+                <table class="table table-striped tabla">
+                    <thead>
+                      <tr>
+                        <th>Talált?</th>
+                        <th>Nyeremény:</th>
+                        <th>Zsebben:</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Igen</td>
+                        <td>18 Ft</td>
+                        <td>1018 Ft</td>
+                      </tr>
+                      <tr>
+                        <td>Nem</td>
+                        <td>-10 Ft</td>
+                        <td>1008 Ft</td>
+                      </tr>
+                      <tr>
+                        <td>Nem</td>
+                        <td>-10 Ft</td>
+                        <td>998 Ft</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="footer" class="container">
+        <div class="row">
+            <div class="col-12">
+                Készítette: balint & rekalaca
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
