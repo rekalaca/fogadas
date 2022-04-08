@@ -13,3 +13,18 @@ connection.connect((err) => {
   if (err) throw err;
   console.log("A csatlakozás létrejött!");
 });
+
+const vagyon = (callback) => {
+  const mySelect =
+    `SELECT money FROM users WHERE gamer="rekalaca";`;
+  connection.query(mySelect, (err, result) => {
+    if (err) callback(err, null);
+    callback(null, JSON.parse(JSON.stringify(result)));
+  });
+};
+
+
+
+module.exports = {vagyon};
+
+

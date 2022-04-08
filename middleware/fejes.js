@@ -3,24 +3,36 @@
  * Ha nem nyert akkor -10 Ft, ha nyert, akkor +18 Ft, ,utána next()
  */
 
-
-const connection = require("../modules/mysql")
-
-
 module.exports = (objRep) => {
     return (req, res, next) => {
 
         res.locals.siker = false;
         console.log(req.body);
 
-        if (req.body.game === "on") {
+
+        if (req.body.game1 == (res.locals.forog = true)) {
+            res.locals.siker = false;
+        }
+        else {
             res.locals.siker = true;
-           
+
         }
 
+        res.locals.forog = true;
+        const a = Math.floor(Math.random() * (100));
+        console.log(a);
+
+        if (a % 2 == 0) {
+            res.locals.forog = false;
+        }
         
         return next();
+
+
+
+
 
     }
 
 }
+

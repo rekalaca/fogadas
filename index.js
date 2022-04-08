@@ -1,8 +1,9 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const port = 2222;
 const bodyParser = require('body-parser');
-const dbData = require('./middleware/queries');
+const { vagyon } = require("./modules/mysql");
 
 
 const addRoutes=require('./route');
@@ -11,15 +12,21 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.static('images'));
 
-app.get('/penz', (req, res) => {
-    dbData.penz((err, data) => {
+
+
+/* app.get("/vagyon", (req, res) => {
+    vagyon((err, vagyon) => {
         if (err) throw err;
-        res.json(data);
-    })
-})
+        res.render("vagyon", { vagyon });
+    });
+}); */
 
-
-
+app.get("vagyon", (req, res) => {
+    vagyon((err, vagyon) => {
+        if (err) throw err;
+        res.render("vagyon", { vagyon });
+    });
+});
 
 
 

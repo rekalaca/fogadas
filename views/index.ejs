@@ -1,58 +1,64 @@
 <%- include("header") %>
 
-<div id="body" class="container">
-    <div class="row">
-        <div id="bal" class="col-3" <p>A játék 1000 forinttal kezdődik. Egy pörgetés 10 forint, amit vagy elbuksz,
-            vagy 18 forintot zsebelsz be helyette...</p>
+    <div id="body" class="container">
+        <div class="row">
+            <div id="bal" class="col-3" <p>A játék 1000 forinttal kezdődik. Egy pörgetés 10 forint, amit vagy elbuksz,
+                vagy 18 forintot zsebelsz be helyette...</p>
+                <h3>Pénztárcámban:</h3><br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card-counter primary">
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                                <span class="count-name">FORINT</span>
+                            </div>
 
-            <% if( naNyertel ) {%>
-            <div class="alert alert-success" role="alert">
-                NYERTÉL !
-            </div>
-            <%} else {%>
-            <div class="alert alert-danger" role="alert">
-                VESZTETTÉL!
-            </div>
-            <%}%>
-
-                            <h3>Fogadásaim:</h3><br>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card-counter primary">
-                                            <i class="fa fa-money" aria-hidden="true"></i>
-                                            <span class="count-numbers">1000</span>
-                                            <span class="count-name">FORINT</span>
-                                        </div>
-                                    </div>
+                            <% if( naNyertel ) {%>
+                                <div class="alert alert-success" role="alert">
+                                    MOST NYERTÉL!
                                 </div>
-                            </div>
-            </div>
-            <div id="kozep" class="col-5">
-                <div class="card">
-                    <img src="iras.jpg" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Játékra fel !</h5>
-                        <p class="card-text">Ha eltalálod, akkor 18 forintot nyersz. Ha nem találnád el, akkor buksz 10
-                            forintot... Felkészültél? Hajrá !</p>
-                        <form method="POST" action="/game">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="game" id="fej">
-                                <label class="form-check-label" for="fej">
-                                    FEJ
-                                </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="game2" id="iras">
-                                <label class="form-check-label" for="iras">
-                                    ÍRÁS
-                                </label>
-                            </div>
-                            <button type="submit" class="btn btn-primary gomb">Na gyerünk !</button>
-                        </form>
+                                <%} else {%>
+                                    <div class="alert alert-danger" role="alert">
+                                        SAJNOS VESZTETTÉL!
+                                    </div>
+                                    <%}%>
+                        </div>
                     </div>
                 </div>
             </div>
+
+
+            <div id="kozep" class="col-5">
+                <div class="card">
+                    <% if( naNyertel ) {%>
+                        <img src="fej.jpg" class="card-img-top" alt="">
+                        <%} else {%>
+                            <img src="iras.jpg" class="card-img-top" alt="">
+                            <%}%>
+                                <div class="card-body">
+                                    <h5 class="card-title">Játékra fel !</h5>
+                                    <p class="card-text">Ha eltalálod, akkor 18 forintot nyersz. Ha nem találnád el,
+                                        akkor buksz 10
+                                        forintot... Felkészültél? Hajrá !</p>
+                                    <form method="POST" action="/">
+                                        <div class="form-check form-check-inline">
+                                            <input name="game1" class="form-check-input" type="radio" id="fej">
+                                            <label class="form-check-label" for="fej">
+                                                FEJ
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input name="game2" class="form-check-input" type="radio" id="iras">
+                                            <label class="form-check-label" for="iras">
+                                                ÍRÁS
+                                            </label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary gomb">Na gyerünk!</button>
+                                    </form>
+                                </div>
+                </div>
+            </div>
+
 
             <div id="jobb" class="col-4">
                 <h3>Eredményeid:</h3>
@@ -62,17 +68,13 @@
                             <th>Nyeremény:</th>
                             <th>Zsebben:</th>
                         </tr>
-                    </thead>
-                    <tbody>
                         <tr>
-                            <td>18 Ft</td>
-                            <td>
-                               
-                            </td>
+                           
                         </tr>
-
-                    </tbody>
+                    </thead>
                 </table>
+
+                </span>
             </div>
         </div>
     </div>
